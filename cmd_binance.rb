@@ -146,7 +146,7 @@ def menu()
     menu4()
   elsif (input == "5")
     menu5()
-  elsif (input == "6")
+  elsif (input == "6" or input == "q" or input == "Q")
     return()
   else
     menu()
