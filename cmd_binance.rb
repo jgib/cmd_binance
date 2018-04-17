@@ -76,7 +76,6 @@ HOME     = "/home/admin/ruby/"                               # Home directory fo
 GPG      = "/usr/bin/gpg"                                    # Path to GPG.
 KEYS     = "#{HOME}keys.gpg"                                 # Path to encrypted keys.
 DECRYPT  = "#{GPG} --passphrase #{pass} -d #{KEYS} #{ERROR}" # Decryption command.
-HEADER   = "X-MBX-APIKEY"                                    # Name of header to use.
 
 ########################################
 ############### CONFIG #################
@@ -271,7 +270,7 @@ end
 def menu5()
   # INPUTS:  None
   # OUTPUTS: None
- puts ""
+  puts ""
   print "Symbol: > "
   symbol  = gets.chomp
   print "Order ID to Cancel: > "
@@ -286,7 +285,7 @@ end
 def menu11()
   # INPUTS:  None
   # OUTPUTS: None
- puts ""
+  puts ""
   print "Symbol > "
   symbol  = gets.chomp
   print "Price  > "
@@ -307,7 +306,7 @@ end
 def menu12()
   # INPUTS:  None
   # OUTPUTS: None
- puts ""
+  puts ""
   print "Symbol > "
   symbol  = gets.chomp
   print "Price  > "
@@ -328,7 +327,7 @@ end
 def menu21()
   # INPUTS:  None
   # OUTPUTS: None
- puts ""
+  puts ""
   print "Symbol > "
   symbol = gets.chomp
   print "Qty    > "
@@ -346,7 +345,7 @@ end
 def menu22()
   # INPUTS:  None
   # OUTPUTS: None
- puts ""
+  puts ""
   print "Symbol > "
   symbol = gets.chomp
   print "Qty    > "
@@ -364,7 +363,7 @@ end
 def main()
   # INPUTS:  None
   # OUTPUTS: None
- keys       = decrypt()
+  keys       = decrypt()
   debug("Getting API Key")
   api_key    = keys[0]
   debug("Getting Secret Key")
@@ -379,3 +378,4 @@ def main()
 end
 
 main()
+
